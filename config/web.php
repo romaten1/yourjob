@@ -17,6 +17,9 @@ $config = [
             'cost' => 12,
             'admins' => ['admin'],
         ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -49,6 +52,7 @@ $config = [
                 ],
             ],
         ],
+
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
