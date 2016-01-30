@@ -48,6 +48,8 @@ AppAsset::register($this);
                 ],
             Yii::$app->user->isGuest ?
                 ['label' => 'Sign Up', 'url' => ['/user/registration/register']] : '',
+            Yii::$app->user-> can('admin') ?
+                ['label' => 'Admin', 'url' => ['/admin']] : '',
         ],
     ]);
     NavBar::end();
