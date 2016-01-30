@@ -19,9 +19,18 @@ $config = [
         ],
         'admin' => [
             'class' => 'app\modules\admin\Module',
+            'modules' => [
+                'rbac' => [
+                    'class' => 'app\modules\admin\modules\rbac\Module',
+                ],
+            ],
         ],
+
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Ek9iyikLk_Zns1-FblwIQvopdR82BMYw',
